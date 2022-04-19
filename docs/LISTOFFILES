@@ -27,7 +27,7 @@ american.ldf    2017/06/06 v3.3r English support from the babel system
 csquotes.sty    2017/03/11 v5.2b context-sensitive quotations (JAW)
 etoolbox.sty    2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
 csquotes.def    2017/03/11 v5.2b csquotes generic definitions (JAW)
-csquotes.cfg    
+csquotes.cfg
 biblatex.sty    2016/12/05 v3.7 programmable bibliographies (PK/JW/AB)
 pdftexcmds.sty    2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO)
 infwarerr.sty    2016/05/16 v1.4 Providing info/warning/error messages (HO)
@@ -53,7 +53,7 @@ standard.bbx    2016/12/05 v3.7 biblatex bibliography style (PK/JW/AB)
  numeric.bbx    2016/12/05 v3.7 biblatex bibliography style (PK/JW/AB)
 numeric-comp.bbx    2016/12/05 v3.7 biblatex bibliography style (PK/JW/AB)
 numeric-comp.cbx    2016/12/05 v3.7 biblatex citation style (PK/JW/AB)
-biblatex.cfg    
+biblatex.cfg
  amsmath.sty    2017/09/02 v2.17a AMS math features
  amstext.sty    2000/06/29 v2.01 AMS text
   amsgen.sty    1999/11/30 v2.0 generic functions
@@ -64,10 +64,10 @@ biblatex.cfg
 textcomp.sty    2017/04/05 v2.0i Standard LaTeX package
   ts1enc.def    2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
   ts1enc.dfu    2017/01/28 v1.1t UTF-8 support for inputenc
- scrhack.sty    2017/09/07 v3.24 KOMA-Script package 
+ scrhack.sty    2017/09/07 v3.24 KOMA-Script package
   xpatch.sty    2012/10/02 v0.3 Extending etoolbox patching commands
-   expl3.sty    2017/09/18 L3 programming layer (loader) 
-expl3-code.tex    2017/09/18 L3 programming layer 
+   expl3.sty    2017/09/18 L3 programming layer (loader)
+expl3-code.tex    2017/09/18 L3 programming layer
 l3pdfmode.def    2017/03/18 v L3 Experimental driver: PDF mode
   xparse.sty    2017/09/18 L3 Experimental document command parser
   xspace.sty    2014/10/28 v1.13 Space after command names (DPC,MH)
@@ -130,7 +130,7 @@ latexrelease.sty    2016/12/29 v1.0h LaTeX release emulation and tests
   xcolor.sty    2016/05/11 v2.12 LaTeX color extensions (UK)
    color.cfg    2016/01/02 v1.6 sample color configuration
 dvipsnam.def    2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-mathpazo.sty    2005/04/12 PSNFSS-v9.2a Palatino w/ Pazo Math (D.Puga, WaS) 
+mathpazo.sty    2005/04/12 PSNFSS-v9.2a Palatino w/ Pazo Math (D.Puga, WaS)
 beramono.sty    2004/01/31 (WaS)
     ueur.fd    2013/01/14 v3.01 Euler Roman
 microtype.sty    2017/07/07 v2.7 Micro-typographical refinements (RS)
@@ -140,7 +140,7 @@ booktabs.sty    2005/04/14 v1.61803 publication quality tables
 textcase.sty    2004/10/07 v0.07 Text only upper/lower case changing (DPC)
 scrlayer-scrpage.sty    2017/09/07 v3.24 KOMA-Script package (end user interfac
 e for scrlayer)
-scrlayer.sty    2017/09/07 v3.24 KOMA-Script package (defining layers and page 
+scrlayer.sty    2017/09/07 v3.24 KOMA-Script package (defining layers and page
 styles)
 titlesec.sty    2016/03/21 v2.10.2 Sectioning titles
  tocloft.sty    2017/08/31 v2.3i parameterised ToC, etc., typesetting

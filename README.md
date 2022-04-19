@@ -27,7 +27,7 @@ This LaTeX-template might be used to write a bachelor or master thesis at the Co
 
 ## Configuration
 
-The LaTeX template can be modified and configured easily using a very limited number of files, namely _classicthesis-config.tex_, _hdathesis-config.tex_, and _thesis.tex_. Only use these three files to modify your LaTeX thesis. Please _DO NOT_ modify the actual LaTeX code for your thesis (as this becomes quite complex and consumes a lot of time). 
+The LaTeX template can be modified and configured easily using a very limited number of files, namely _classicthesis-config.tex_, _hdathesis-config.tex_, and _thesis.tex_. Only use these three files to modify your LaTeX thesis. Please _DO NOT_ modify the actual LaTeX code for your thesis (as this becomes quite complex and consumes a lot of time).
 Please find a brief description of the various configuration options below:
 
 ### thesis.tex
@@ -44,7 +44,7 @@ The default output of the LaTeX thesis template is a single-sided style that als
                 BCOR=5mm,paper=a4,fontsize=11pt,%
                 ngerman,american,%lockflag%
                 ]{scrreprt}
-``` 
+```
 
 You may also adapt the paper size (_paper=a4_) and the font size (_fontsize=11_) if necessary.
 
@@ -230,4 +230,4 @@ The h_da computer science department LaTeX thesis template is licenced under GPL
 
 ## Acknowledgements
 
-* Many thanks to Sebastian Jung for his hints on the local Docker approach for compiling the LaTeX code. 
+* Many thanks to Sebastian Jung for his hints on the local Docker approach for compiling the LaTeX code.
