@@ -5,8 +5,8 @@ name: template
 jobs:
   test-latex-template:
     runs-on: ubuntu-20.04
-    name: Test LaTeX Template 
-    steps: 
+    name: Test LaTeX Template
+    steps:
       - uses: actions/checkout@v2
       - name: Build
         run: |
