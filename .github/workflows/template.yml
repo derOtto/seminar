@@ -1,4 +1,4 @@
-on: [push, pull_request]
+on: [pull_request]
 
 name: template
 
@@ -14,3 +14,9 @@ jobs:
         run: |
           docker pull mbredel/thesis-template:latest
           docker run --volume $(pwd):/thesis-template/ mbredel/thesis-template:latest
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v3
+        with:
+          name: thesis.pdf
+          path: thesis.pdf
+          retention-days: 7
