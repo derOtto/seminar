@@ -67,6 +67,9 @@
 \newcommand{\Ie}{I.\,e.}
 \newcommand{\eg}{e.\,g.}
 \newcommand{\Eg}{E.\,g.}
+\newcommand\chap[1]{%
+  \chapter*{#1}%
+  \addcontentsline{toc}{chapter}{#1}}
 % ****************************************************************************************************
 
 
@@ -87,8 +90,9 @@
   %backend=biber,bibencoding=utf8, %instead of bibtex
   backend=bibtex8,bibencoding=ascii,%
   language=auto,%
-  %style=numeric-comp,%
-  style=alphabetic,%
+  style=numeric,%
+  pagetracker=page,
+  %style=alphabetic,%
   %style=authoryear-comp, % Author 1999, 2010
   %bibstyle=authoryear,dashed=false, % dashed: substitute rep. author with ---
   sorting=nyt, % name, year, title
@@ -189,6 +193,7 @@
 %\PassOptionsToPackage{pdftex}{graphicx} %%%IVO: driver will be chosen automatically
   \usepackage{graphicx}
 
+\usepackage{cleveref}
 
 % ********************************************************************
 % Hyperreferences
