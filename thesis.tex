@@ -45,6 +45,11 @@
 \input{classicthesis-config}
 
 %*************************************************************************
+% Glossaries
+%*************************************************************************
+\input{glossaries.tex}
+
+%*************************************************************************
 % Bibliographies
 %*************************************************************************
 \addbibresource{bibliography.bib}
@@ -93,7 +98,6 @@
 \include{chapters/chapter03}
 \include{chapters/chapter04}
 \include{chapters/chapter05}
-\include{chapters/chapter06}
 \include{chapters/chapter99}
 %*************************************************************************
 % Recommendations
@@ -112,10 +116,12 @@
 %*************************************************************************
 % Other Stuff in the Back
 %*************************************************************************
-\cleardoublepage\include{frontbackmatter/Acronyms}
+%\cleardoublepage\include{frontbackmatter/Acronyms}
+\cleardoublepage\printglossary[type=\acronymtype]
+\cleardoublepage\printglossary
 \cleardoublepage\include{frontbackmatter/Figures}
 \cleardoublepage\include{frontbackmatter/Tables}
-\cleardoublepage\include{frontbackmatter/Listings}
+%\cleardoublepage\include{frontbackmatter/Listings}
 \cleardoublepage\include{frontbackmatter/Bibliography}
 %*************************************************************************
 % Game Over: Restore, Restart, or Quit?
