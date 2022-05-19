@@ -5,7 +5,9 @@ SURNAME = Mustermann
 
 all: clean
 	@pdflatex ${MASTER}.tex
-	@test -f ${MASTER}-blx.bib && ( bibtex ${MASTER}; pdflatex ${MASTER}.tex ) || echo "No Bibtex"
+	@test -f bibliography.bib && ( bibtex ${MASTER}; pdflatex ${MASTER}.tex ) || echo "No Bibtex"
+	@test -f ${MASTER}.glo && ( makeglossaries ${MASTER}; pdflatex ${MASTER}.tex ) || echo "No Glossaries"
+	@bibtex ${MASTER}
 	@pdflatex ${MASTER}.tex
 
 publish: all
@@ -13,7 +15,7 @@ publish: all
 	@mv ${MASTER}.pdf.pdf ${MASTER}.pdf
 
 clean:
-	@rm -rf *run.xml *-blx.bib *.aux *.bbl *.blg *.brf *.log *.lof *.lot *.lol *.out *.tcp *.toc *.tps *.bak *.backup *.pdfsync *.synctex.gz *.*~
+	@rm -rf *run.xml *-blx.bib *.acn *.acr *.alg *.glg *.gls *.glo *.ist *.aux *.bbl *.blg *.brf *.log *.lof *.lot *.lol *.out *.tcp *.toc *.tps *.bak *.backup *.pdfsync *.synctex.gz *.*~
 	@for i in run.xml -blx.bib aux bbl blg brf log lof lot lol out tcp toc tps bak backup pdfsync synctex.gz; do find . -name *.$$i -exec rm -f {} + ; done
 	@find . -name *.*~ -exec rm -f {} +
 
