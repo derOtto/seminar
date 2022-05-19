@@ -193,7 +193,7 @@
 %\PassOptionsToPackage{pdftex}{graphicx} %%%IVO: driver will be chosen automatically
   \usepackage{graphicx}
 
-\usepackage{cleveref}
+\usepackage[nameinlink]{cleveref}
 
 % ********************************************************************
 % Hyperreferences
@@ -303,3 +303,10 @@
 % ********************************************************************
 %\linespread{1.05} % a bit more for Palatino
 % ****************************************************************************************************
+
+\usepackage{chronosys}
+\usepackage{float}
+\usepackage[figuresright]{rotating}
+\usepackage{pdflscape}
+\usepackage[style=long,nolist,acronym,toc]{glossaries-extra}
+\IfFileExists{eforms.sty}{\usepackage{eforms}}{}
