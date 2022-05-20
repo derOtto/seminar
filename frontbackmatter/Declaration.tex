@@ -25,8 +25,14 @@ Diese Arbeit ist in gleicher oder ähnlicher Form noch bei keiner anderen Prüfu
 \smallskip
 
 \begin{flushright}
-    \begin{tabular}{m{5cm}}
-        \\ \hline
-        \centering\myName \\
-    \end{tabular}
+    \IfFileExists{eforms.sty}
+    {
+        \sigField[\BC{0}]{\myName}{8cm}{3cm}
+    }
+    {
+        \begin{tabular}{m{5cm}}
+            \\ \hline
+            \centering\myName \\
+        \end{tabular}
+    }
 \end{flushright}
