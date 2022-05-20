@@ -1,13 +1,124 @@
 \chapter{KRITIS}\label{ch:kritis}
+Nachdem wir nun einen Überblick über die Historie erlangen konnten,
+befassen wir uns nun mit den Inhalten des Gesetzes.
+In diesem Kapitel werden daher die Änderungen in Bezug auf die Kritische Infrastruktur (KRITIS) beleuchtet.
+Während die erste Hälfte des Kapitels sich um die neuen KRITIS Betreiber dreht,
+handelt die andere Hälfte von den Pflichten der Betreiber.
 
 \section{Neue KRITIS Betreiber}\label{sec:neue-kritis-betreiber}
+Ein wichtiger Teil des \acrshort{it-sig-2.0} dreht sich um das Hinzukommen neuer KRITIS Betreiber.
+Hier sind insbesondere zwei große Änderungen zu nennen.
 
 \subsection{Siedlungsabfallentsorgung}\label{ssec:siedlungsabfallentsorgung}
+Unter anderem durch die Corona-Pandemie konnten wir feststellen, wie wichtig die Abfallentsorgung eigentlich ist.
+Mit Artikel 1 wurde das BSI-Gesetz unter anderem dahingehend geändert,
+dass in §~2 Absatz 10 Satz 1 Nummer 1 die Siedlungsabfallentsorgung eingefügt wurde.
+Damit ist sie den bisherigen Sektoren Energie, Informationstechnik und Telekommunikation,
+Transport und Verkehr, Gesundheit, Wasser, Ernährung, Finanz- und Versicherungswesen nebenan gestellt.
+Leider sind zum Zeitpunkt dieser Seminararbeit noch keine genauen Schwellenwerte und Anlagendefinitionen bekannt.
+Diese sollen mit der Kritis-Verordnung 2.0 noch im Jahr 2022 geschaffen werden.
+(vgl.~\cite{neue-it-sig-2.0})
 
 \subsection{Unternehmen im besonderen öffentlichen Interesse}\label{ssec:unternehmen-im-besonderen-offentlichen-interesse}
+Neben den uns meist bekannten Unternehmen der Abfallentsorgung,
+fallen auch Unternehmen im besonderen öffentlichen Interesse und deren Zulieferer unter die Regulierungen.
+Dabei lassen sich diese den folgenden drei Gruppen zuordnen (§~2 Abs.~14 BSI-Gesetz):
+\begin{enumerate}
+    \item \textsc{Rüstung}:
+    \enquote{Hersteller von Rüstung und Produkten für staatliche Verschlusssachen (VS)}~\cite{neue-it-sig-2.0}
+    \item \textsc{Volskswirtschaftliche Bedeutung (und evtl. Zulieferer)}:
+    \enquote{Unternehmen von erheblicher volkswirtschaftlicher Bedeutung [...]}~\cite{neue-it-sig-2.0}
+    \item \textsc{Gefahrstoffe}:
+    \enquote{Betreiber Betriebsbereiche der oberen Klasse mit gefährlichen Stoffen}~\cite{neue-it-sig-2.0}
+\end{enumerate}
+Auch hier sind die genaueren Definitionen zu diesem Zeitpunkt noch offen und werden ebenfalls voraussichtlich 2022 durch die UBI-VO festgelegt.
+Die Pflichten hingegen sind im Allgemeinen bereits in §~8f BSI-Gesetz definiert.
+Darunter fallen:
+\begin{itemize}
+    \item die selbstständige \textsc{Identifikation und Registrierung} innerhalb von zwei Jahren,
+    \item regelmäßige \textsc{Selbsterklärungen zur IT-Sicherheit} (Zertifizierungen, Sicherheitsaudits \& Sicherheitsmaßnahmen) vorzunehmen und zu melden und
+    \item \textsc{Vorfallsmeldungen}, also bestimmte Störungen, zu melden.
+\end{itemize}
+(vgl.~\cite{neue-it-sig-2.0})
 
 \section{Angriffserkennung}\label{sec:angriffserkennung}
+Zu den wesentlichen technischen und organisatorischen Sicherheitsvorkehrungen der KRITIS-Betreiber gehören mit dem \acrshort{it-sig-2.0} Systeme zur Angriffserkennung.
+Grundsätzlich lassen sich dabei zwei Methoden unterscheiden.
+Die erste ist die \textsc{Signaturbasierte Angriffserkennung}.
+Hierbei wird der Netzwerk- bzw.\ Datenverkehr anhand bekannter Signaturen (z.B.\ durch Zeichenerkennung) analysiert.
+Die andere Methode hingegen ist die \textsc{Anomalieerkennung}.
+Dabei werden meist mehrere Daten, wie Protokolle, Sensordaten, usw.\ nach Ausreisern untersucht.
+Oft werden dazu auch Systeme des maschinellen Lernens genutzt, um die Masse an Daten überhaupt auswerten zu können.
+(vgl.~\cite{neue-it-sig-2.0,intrusion-prevention-system})
+
+Laut Begriffsdefinition aus §~2, Abs.~9b BSI-Gesetz handelt es sich bei den Systemen um technische Werkzeuge
+und unterstützende Prozesse.
+Insbesondere letzteres lässt die Experten dazu schließen, dass wohl \acrshort{siem} und \acrshort{soc} zur Angriffserkennung gemeint sind.
+Eine reine Signaturbasierte Angriffserkennung reiche demnach nicht aus.
+(vgl.~\cite{neue-it-sig-2.0})
+
+\acrshort{siem} steht hierbei für \textsc{Security Information and Event Management} und ist ein softwarebasiertes Technologiekonzept.
+\enquote{Durch das Sammeln, Korrelieren und Auswerten von Meldungen, Alarmen und Logfiles verschiedener Geräte,
+Netzkomponenten, Anwendungen und Security-Systeme in Echtzeit werden Angriffe, außergewöhnliche Muster
+oder gefährliche Trends sichtbar.}~\cite{siem}
+Oft sind die Lösungen auch als Dienste aus der Cloud verfügbar.
+(vgl.~\cite{siem})
+
+Größere Unternehmen mit entsprechendem Fachwissen und Resourcen,
+können in eigenen \textsc{Security Opterations Centern} (\acrshort{soc}) sich um die Angriffserkennung kümmern.
+Auch hier kommen dann meist \acrshort{siem}-Systeme zum Einsatz.
+(vgl.~\cite{soc})
+
+Die Webinarreiche zum IT-Sicherheitsgesetz 2.0 unter \url{https://info.rhebo.com/de/webinarreihe-zum-it-sicherheitsgesetz}
+ist hierbei sehr zu empfehlen, falls man tiefere Einblicke in dieses Thema erhalten möchte.
+So konnte man hier beispielsweise erfahren, dass das Unternehmen Radar Cyber Security der EnBW zunächst SIEM als Cloud-Dienst liefert,
+bis nach ungefähr einem halben Jahr die EnBW in der Lage ist, ihr eigenes \acrshort{soc} zu betreiben.
+(vgl.~\cite{webinarreihe-it-sig-2.0-auftakt})
+
+Spätestens ab dem 1.\ Mai 2023 ist der Einsatz dann verpflichtend und muss auch explizit nachgewiesen werden.
+(vgl.~\cite{neue-it-sig-2.0})
 
 \section{Meldepflichten}\label{sec:meldepflichten}
+Neben der Angriffserkennung wurde mit dem §~8b, Abs.~4a BSI-Gesetz die Pflicht auferlegt,
+bei erheblichen Störungen dem BSI auf Nachfrage Informationen zur Verfügung zu stellen (einschließlich personenbezogener Daten).
+Zusätzlich sind nach §~9b BSI-Gesetz alle kritischen Komponenten dem BSI zu melden.
+Das sind unter anderem alle IT-Produkte, die in der Kritischen Infrastruktur eingesetzt werden, also quasi eine Inventarliste.
+(vgl.~\cite{neue-it-sig-2.0})
+
+Durch die Änderung des §~8b, Absatz 3 und 3a BSI-Gesetz sind Betreiber unmittelbar nach Feststellung verpflichtet,
+sich beim BSI zu registrieren.
+Ebenfalls muss damit eine Kontaktstelle benannt werden, welche jederzeit erreichbar sein muss.
+Kommt ein Betreiber seiner Registrierungspflicht nicht nach,
+kann auch das \acrshort{bsi} selbst die Registrierung samt Benennung der Kontaktstelle vornehmen.
+In diesem Fall ist das \acrshort{bsi} auch berechtigt Aufzeichnungen, Schriftstücke und sonstige Unterlagen zu verlangen,
+welche zur Bewertung dinglich sind.
+Ebenso wird dann auch die zuständige Aufsichtsbehörde informiert.
+Daher sollten alle Unternehmen, sobald diese vorliegen, die Kriterien kennen,
+um eine mögliche Registrierung nicht zu versäumen.
+(vgl.~\cite{neue-it-sig-2.0})
 
 \section{Kritische Komponenten}\label{sec:kritische-komponenten}
+Wie bereits im vorherhigen Abschnitt angedeutet,
+müssen KRITIS-Betreiber dem \acrshort{bmi} den Einsatz kritischer Komponenten anzeigen.
+Allerdings müssen diese und die kritischen Funktionen, aus denen kritische Komponenten abgeleitet werden können,
+auf Grund eines Gesetzes festgelegt werden.
+Jedoch ist dies bisher lediglich im Sektor Telekommunikation durch das TKG 2021 geschehen.
+FÜr alle weiteren Sektoren muss demnach noch abgewartet werden.
+Bis dahin gibt es de jure keine kritischen Komponenten in diesen Sektoren.
+(vgl.~\cite{neue-it-sig-2.0})
+
+Sollten dann kritische Komponenten eingesetzt werden,
+so sind für diese Garantieerklärungen der Vertrauenswürdigkeit des Herstellers erforderlich.
+Genaue Anforderungen an solche Erklärungen ist das \acrshort{bmi} noch schuldig.
+(vgl.~\cite{neue-it-sig-2.0})
+
+Im Weiteren ist des dem \acrshort{bmi} möglich, unter bestimmten Voraussetzungen,
+den Einsatz solcher Komponenten zu untersagen.
+Das ist zum einen die \textsc{Beeinträchtigung der öffentlichen Ordnung und Sicherheit},
+also beispielsweise, wenn ein Hersteller von der Regierung kontrolliert wird.
+Zum anderen kann der Verwendung untersagt werden,
+wenn die Vertrauenswürdigkeit basierend auf der Garantieerklärung des Herstellers,
+Sicherheitstests und Schwachstellen und Manipulationen fehlt.
+Vor allem der zweite Punkt wird aber auch kritisch gesehen, da dies dazu führen könnte,
+dass Schwachstellen eher seltener gemeldet würden.
+(vgl.~\cite{neue-it-sig-2.0})
