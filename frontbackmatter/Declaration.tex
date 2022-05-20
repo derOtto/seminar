@@ -2,7 +2,7 @@
 % Declaration
 %*******************************************************
 \refstepcounter{dummy}
-\pdfbookmark[0]{Declaration}{declaration}
+\pdfbookmark[0]{Erklärung}{erklaerung}
 \chapter*{\condENGLISH{Declaration}{Erklärung}}
 \thispagestyle{empty}
 Ich versichere hiermit, dass ich die vorliegende Arbeit selbstständig verfasst und keine anderen als die im Literaturverzeichnis angegebenen Quellen benutzt habe.
@@ -25,8 +25,14 @@ Diese Arbeit ist in gleicher oder ähnlicher Form noch bei keiner anderen Prüfu
 \smallskip
 
 \begin{flushright}
-    \begin{tabular}{m{5cm}}
-        \\ \hline
-        \centering\myName \\
-    \end{tabular}
+    \IfFileExists{eforms.sty}
+    {
+        \sigField[\BC{0}]{\myName}{8cm}{3cm}
+    }
+    {
+        \begin{tabular}{m{5cm}}
+            \\ \hline
+            \centering\myName \\
+        \end{tabular}
+    }
 \end{flushright}
