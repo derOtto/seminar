@@ -1,9 +1,121 @@
 \chapter{BSI}\label{ch:bsi}
+Bereits im vorherigen Kapitel war oft vom BSI-Gesetz die Rede.
+Das BSI beziehungsweise deren Gesetz spielt demnach eine zentrale Rolle im \acrshort{it-sig-2.0}.
+Allerdings ging es im vorher meist um Pflichten und Aufgaben der Unternehmen (im Bezug zum BSI).
+Im Folgenden jedoch geht es um das Innere des Bundesamts, deren Aufgaben und Befugnisse.
 
 \section{Personal}\label{sec:personal}
+Natürlich werden nicht nur in den KRITIS-Unternehmen selbst Mitarbeitende benötigt,
+auch das BSI muss durch die Novelle an Personal aufstocken.
+Im Gesetzentwurf der Bundesregierung wird im Erfüllungsaufwand mit 799~Planstellen und
+jährlichen Personalkosten in Höhe von rund 74,24~Mio.~€ gerechnet.
+Es ist damit einer der größten Aufwände dieses Gesetzes.
 
 \section{Neue Aufgaben und Befugnisse}\label{sec:neue-aufgaben-und-befugnisse}
+Auch das BSI hat künftig neue Aufgaben zu verfolgen.
+Diese sind in §~3 BSI-Gesetz ergänzt worden und umfassen:
+\begin{itemize}
+    \item \enquote{Aufgaben und Befugnisse als nationale Behörde für Cybersicherheitszertifizierung (5a)}~\cite{neue-it-sig-2.0}
+    \item \enquote{Erweiterte Beratung und Warnung staatlicher Stellen (12a und 14)}~\cite{neue-it-sig-2.0}
+    \item \enquote{Verantwortungen für den Verbraucherschutz (14a)}~\cite{neue-it-sig-2.0}
+    \item \enquote{Erweiterung als zentrale Stelle für KRITIS-Betreiber und UBI/UNBÖFI (17)}~\cite{neue-it-sig-2.0}
+    \item \enquote{Empfehlungen für die Sicherheit von IAM-Verfahren und Stand der Technik für Sicherheit in IT-Produkten, nach bestehenden Normen (19 und 20)}~\cite{neue-it-sig-2.0}
+\end{itemize}
+
+Als zentrale Meldestelle für Sicherheit in der Informationstechnik,
+\enquote{darf das BSI Informationen zu Schadprogrammen, Lücken und Angriffen sammeln, analysieren,
+über noch einzurichtende Meldewege entgegennehmen und diese Informationen u.a. für Warnungen, Meldungen benutzen}~\cite{neue-it-sig-2.0}.
+Das bedeutet, dass das Bundesamt selbst Schlüsse ziehen und im Bedarfsfall die Bevölkerung warnen kann und soll.
 
 \subsection{Hackerbehörde}\label{ssec:hackerbehorde}
+Zu kaum einem Thema des \acrshort{it-sig-2.0} gab es so viele Artikel, wie dass das BSI zur Hackerbehörde wird
+(vgl.~\cite{bsi-wird-zur-hackerbehoerde,it-sig-2.0-bundestag-baut-bsi-zur-hackerbehoerde-aus,seehofer-bsi-hackerbehoerde,entwurf-hackerbehoerde}).
+Ganz unbegründet sind diese jedoch auch nicht.
+Gleich vier Paragrafen (7a – 7d) des BSI-Gesetzes wurden neu gefasst oder gar neu eingefügt.
 
-\section{Zertifizierungen}\label{sec:zertifizierungen}
+\subsubsection{Untersuchung von IT-Produkten und Systemen}\label{sssec:untersuchung-von-it-produkten-und-systemen}
+Der erste Paragraf (7a) befasst sich mit der \textsc{Untersuchung der Sicherheit in der Informationstechnik}.
+Genauer darf das \acrshort{bsi} IT-Produkte und Systeme des Marktes untersuchen.
+Auch kann es hierbei Auskünfte von Herstellern verlangen.
+Die Ergebnisse dürfen dann, nach Einräumung einer Stellungsnahme des Herstellers, veröffentlicht oder weiter gegeben werden.
+Kritisch zu sehen ist hier jedoch, dass es keine Pflicht zur Veröffentlichung gibt.
+Erkenntnisse über Schwachstellen könnten demnach zum Beispiel zum eigenen Zweck zurückgehalten werden.
+(vgl.~\cite{neue-it-sig-2.0})
+
+\subsubsection{Portscans}\label{sssec:portscans}
+\begin{figure}[H]\centering
+    \includegraphics{chapters/images/shodan_exposure_germany}
+    \caption{\href{https://exposure.shodan.io/\#/DE/}{Internet Exposure Dashboard – Germany} (vgl.~\cite{shodan-dashboard-exposure-germany})}
+    \label{fig:shodan-exposure-germany}
+\end{figure}
+Kaum eine Suchmaschine ist so erschreckend wie \href{https://www.shodan.io/}{shodan.io}.
+Während es für uns in Deutschland nur mit Auftrag und Genehmigung erlaubt ist,
+über einen Portscan Systeme zu untersuchen, um so z.B.\ Sicherheitslücken zu finden,
+so liefert die Suchmaschine gleich alle Daten fein sortiert und filterbar in einer aufbereiteten Form im Web.
+Allerdings lassen sich damit nicht nur, wie so oft, ungeschützte Kameras finden,
+auch Dashboards zu den einzelnen Ländern liefern so wichtige Daten.
+In \cref{fig:shodan-exposure-germany} sieht man die gewonnenen Daten zu den Portscans deutscher IP-Adressen,
+zum Zeitpunkt dieser Arbeit.
+Besonders besorgniserregend ist in diesem Fall die Zahl der erreichbaren
+Industriellen Steuerungs- und Automatisierungssysteme (\acrshort{ics}).
+Das sind nämlich Systeme, die zum Messen, Steuern und Regeln von Abläufen in der Industrie,
+meist in Branchen der KRITIS vorkommen.
+(vgl.~\cite{bsi-ics})
+
+§~7b (\textsc{Detektion von Sicherheitsrisiken für die Netz- und IT-Sicherheit und von Angriffsmethoden})
+ermächtigt das \acrshort{bsi} nun zum aktiven Hacken.
+Gemeint sind mit den Maßnahmen Portscans an öffentlich erreichbaren Schnittstellen.
+So sollten solche, öffentlich erreichbare Systeme gefunden werden können.
+
+Allerdings handelt es sich bei den Systemen, welche hierbei kontrolliert werden dürfen,
+nur um einen Teilbereich.
+Nur IP-Bereiche auf einer Weißen Listen von Systemen des Bundes, von KRITIS-Betreibern oder \acrshort{unboefi},
+welche zudem stets anzupassen ist, dürfen dabei gescannt werden.
+Sollte eine oder mehrere Lücken gefunden werden,
+so soll unverzüglich die Verantwortlichen bzw.\ der Betreiber darüber in Kenntnis gesetz werden.
+(vgl.~\cite{neue-it-sig-2.0})
+
+\subsubsection{Störungsbeseitigung}\label{sssec:storungsbeseitigung}
+Mit Paragraf 7c (\textsc{Anordnung des Bundesamtes gegenüber Diensteanbietern}) wurde dem BSI wohl eine der meist kritisierten Befugnisse erteilt.
+
+Im Fall konkreter erheblicher Gefahren kann das Bundesamt \acrshort{tkg}-Anbietern mit mehr als 100.000 Kund*innen anordnen,
+dass diese technische Befehle zur Bereinigung an betroffene Systeme verteilen.
+Das könnten beispielsweise Sicherheitslücken in Routern von \acrshort{isp} sein,
+welche dann von den \acrshort{isp} nach Anordnung automatisch gepacht werden müssten.
+(vgl.~\cite{neue-it-sig-2.0})
+
+Zusätzlich kann das Umleiten des Datenverkehrs an eine Anschlusskennung des \acrshort{bsi} angeordnet werden.
+Die so bekommenen Daten dürfen dabei auch gespeichert und verarbeitet werden.
+Wenngleich bis Mitte des Folgejahres die Gesamtzahl an angeordneten Datenumleitungen dem oder der \acrshort{bfdi} gemeldet werden muss,
+so wird das aber auch sehr kritisch gesehen.
+Das Problem ist dabei, dass so ein System schnell auch missbraucht werden könnte, wie zum Beispiel für Zensur.
+(vgl.~\cite{neue-it-sig-2.0})
+
+\subsubsection{Telemedien-Anbieter}\label{sssec:telemedien-anbieter}
+§~7d regelt lediglich,
+dass die Behörde Telemendien-Anbietern Anordnungen zur Ergreifung von Sicherheitsmaßnahmen erteilen darf.
+(vgl.~\cite{neue-it-sig-2.0})
+
+\subsection{Schutz der Bundesnetze}\label{ssec:schutz-der-bundesnetze}
+Neben der Funktion als \enquote{Hackerbehörde},
+werden mit dem Paragrafen 4a BSI-Gesetz dem \acrshort{bsi} die Rechte und Pflichten zum Schutz der Bundesnetze auferlegt.
+Darunter fallen:
+\begin{itemize}
+    \item die Sicherheit der Kommunikationstechnik und Infrastrukturen des Bundes zu kontrollieren
+    (Informationen und Dokumente dürfen dabei angefordert werden),
+    \item der Zutritt zu Betriebsräumen der Kommunikationstechnik des Bundes,
+    \item mit Zustimmung Dritter, deren Schnittstellen zur Kommunikationstechnik des Bundes zu kontrollieren.
+\end{itemize}
+Ausgenommen ist jedoch die \acrshort{ikt} des auswärtigen Dienstes und der Bundeswehr.
+(vgl.~\cite{neue-it-sig-2.0})
+
+Die Behörde darf, ermächtigt durch §~5a BSI-Gesetz, zum Erkennen von Störungen und Angriffen des Bundes,
+behördeninterne Protokolldaten verarbeiten.
+Demnach kann das \acrshort{bsi} das Monitoring Bundes-IT übernehmen.
+Zusätzlich ist es berechtigt (durch §~8) verbindliche Mindeststandards für die Sicherheit der Bundes-IT festzulegen.
+(vgl.~\cite{neue-it-sig-2.0})
+
+\subsection{Zertifizierungen}\label{ssec:zertifizierungen}
+Mit §~9a wird das \acrshort{bsi} die \textsc{Nationale Behörde für die Cybersicherheitszertifizierung} des Staats.
+Damit kommt der Gesetzgeber der Umsetzung der Cybersicherheitsverodnung (ENISA) der EU nach.
+Damit darf sie \enquote{Konformitätsbewertungsstellen eine Tätigkeitserlaubnis erteilten und Zertifikate überprüfen und wiederrufen}~\cite{neue-it-sig-2.0}.
