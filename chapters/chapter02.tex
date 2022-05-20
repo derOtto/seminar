@@ -1,5 +1,61 @@
 \chapter{Umriss}\label{ch:umriss}
+Zu Beginn soll mit diesem Kapitel zunächst die Historie des IT-Sicherheitsgesetzes 2.0 (hier und im Folgenden oft auch als \acrshort{it-sig-2.0} abgekürzt) beleuchtet werden.
+Dabei wird auch Bezug zu anderen relevanten Gesetzen und \glspl{eu-richtlinie} genommen.
 
 \section{Historie}\label{sec:historie}
+%\newcommand{\MyIcon{\color{orange}\vrule width 5pt height5pt\relax}}
+
+\setupchronograduation[event]{markdepth=2cm}
+
+\begin{figure}[H]\centering
+    \startchronology[startyear=2015, stopyear=2021, color=lightgray, height=7ex]
+    \chronoevent[icon=\color{blue}\vrule width 5pt height 5pt,textstyle=\bf,datesstyle=\it,conversionmonth=false,markdepth=5cm]{08/2016}{EU NIS Richtlinie}
+    \chronoevent[icon=\color{orange}\vrule width 5pt height 5pt,textstyle=\bf,datesstyle=\it,markdepth=3.5cm,conversionmonth=false]{06/2017}{KRITIS-Verordnung Korb 2}
+    \chronoevent[icon=\color{orange}\vrule width 5pt height 5pt,textstyle=\bf,datesstyle=\it,markdepth=2cm,conversionmonth=false]{04/2016}{KRITIS-Verordnung Korb 1}
+    \chronoevent[icon=\color{orange}\vrule width 5pt height 5pt,textstyle=\bf,datesstyle=\it,markdepth=1cm,conversionmonth=false]{07/2015}{IT-SiG 1.0}
+    \chronoperiode[textstyle=\bf,datesstyle=\it,color=orange]{2019}{2021}{Entwürfe IT-SiG 2.0}
+    \chronoevent[icon=\color{blue}\vrule width 5pt height 5pt,textstyle=\bf,datesstyle=\it,conversionmonth=false,markdepth=5cm]{2020}{Entwürfe EU NIS2 / RCE}
+    \chronoevent[icon=\color{orange}\vrule width 5pt height 5pt,textstyle=\bf,datesstyle=\it,markdepth=1cm]{2021}{IT-Sicherheitsgesetz 2.0}
+    \stopchronology
+    \caption{Zeitlicher Ablauf wichtiger Gesetzte und Richtlinien im Bezug zum IT-Sicherheitsgesetz 2.0 (vgl.~\cite{briefing-it-sig-2.0})}
+    \label{fig:historie-it-sig-2.0}
+\end{figure}
+
+In \cref{fig:historie-it-sig-2.0} sieht man den zeitlichen Ablauf, bis zur Verabschiedung des \acrshort{it-sig-2.0} im April / Mai 2021.
+
+Bereits 2015 wurde mit dem \acrshort{it-sig-1.0} eine erste Grundlage geschaffen.
+Damit wurden insbesondere Vorkehrungen im Meldewesen verschiedener Sektoren, wie Energie oder Telekommunikation getroffen,
+aber auch Verschiedenes definiert.
+Knapp ein Jahr später im April 2016 hat das \acrshort{bsi} mit der ersten Kritis-Verordnung das \acrshort{it-sig-1.0}
+für den ersten Korb (Sektoren Energie, IT+TK, Ernährung, Wasser) umgesetzt.
+Wieder gut ein Jahr später nämlich im Juni 2017 wurden durch die Kritis-Verordnung Korb 2 die Regelungen für die Sektoren
+Gesundheit, Finanz- \& Versicherungswesen und Transport \& Verkehr spezifiziert.
+(vgl.~\cite{kritis-gesetzgebung,umsetzung-it-sig-1.0-bsi})
+
+Währenddessen trat im August 2016 die NIS-Richtlinie in Kraft.
+Diese ist die erste Maßnahme für Cyber-Sicherheit auf Europa-Ebene.
+Für Deutschland musste allerdings nicht mehr viel umgesetzt bzw. geändert werden,
+da das Meiste bereits mit dem \acrshort{it-sig-1.0} geregelt war.
+Komplett neu mussten letztlich Regelungen für \textsc{Anbieter Digitaler Dienste} geschaffen werden.
+Gleichzeitig mit dem Gesetz zur Umsetzung der NIS-Richtlinie,
+erhielt das \acrshort{bsi} mehr Befugnisse, sodass es künftig die Bundesländer besser unterstützen und beraten kann.
+(vgl.~\cite{gesetz-zur-umsetzung-der-nis-richtlinie})
+
+Bis das IT-Sicherheitsgesetz 2.0 letztlich in der beschlossenen Fassung im Mai 2021 beschlossen wurde,
+gab es ab Mai 2019 etliche Versionen.
+Die AG KRITIS listet in ihrem Artikel \url{https://ag.kritis.info/2021/05/19/it-sicherheitsgesetz-2-0-alle-verfuegbaren-versionen/} alle verfügbaren Versionen auf.
+Im Gegensatz zum \acrshort{bmi} sahen die meisten Verbände und Interessensvertretungen, dass deren Meinungen, Bewertungen und demokratische Teilhabe unerwünscht sei.
+Dies liegt insbesondere an den teilweise sehr kurzen Zeiträumen zur Kommentierung der Entwürfe.
+So wurde den zum Teil oft ehrenamtlichen Experten lediglich etwas mehr als 24 Stunden (10:15 Uhr bis 14 Uhr des Folgetags) Zeit gegeben,
+den 108-seitigen vierten Entwurf zu kommentieren.
+Die AG KRITIS bezeichnet die Frist daher auch als den \enquote{ministerielle[n] Mittelfinger ins Gesicht der Zivilgesellschaft}~\cite{it-sig-2.0-vierter-entwurf-24h}.
+(vgl.~\cite{it-sig-2.0-alle-vers,it-sig-2.0-vierter-entwurf-24h})
 
 \section{EU-NIS2-Richtlinie}\label{sec:eu-nis2-richtlinie}
+An dieser Stelle sei erwähnt, dass die EU 2020 einen ersten Entwurf zur NIS2-Richtlinie, welche die erste ergänzen soll,
+erstellt hat.
+Auch wenn diese zum Zeitpunkt der Erstellung dieser Seminararbeit noch nicht final ist,
+so wurden voraussichtlich einige Punkte bereits mit dem \acrshort{it-sig-2.0} umgesetzt.
+Zusätzlich zu den Themen der Informationssicherheit der NIS2-Richtlinie,
+reguliert die zugehörige \acrshort{rce}-Richtlinie die Resilienz (Ausfallsicherheit) der KRITIS\@.
+(vgl.~\cite{eu-nis-rce})
